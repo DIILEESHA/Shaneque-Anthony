@@ -85,9 +85,10 @@ const Faq = () => {
               Are specific colors required for the dress code?
             </p>
             <p className="faq_para">
-              No, there are no specific color requirements. Feel free to express
-              your personal style and wear colors that make you feel comfortable
-              and confident.
+              There are no specific color requirements—feel free to express your
+              personal style and wear colors that make you feel comfortable and
+              confident. However, we kindly ask that guests avoid wearing black.
+              Everything else is welcome for your attire.
             </p>
           </div>
         </div>

@@ -29,7 +29,11 @@
   font-weight: 300;
   color: var(--lilac);
   font-size: 30px;
+  width: 90%;
   text-align: center;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
   margin-bottom: 30px;
 }
 
