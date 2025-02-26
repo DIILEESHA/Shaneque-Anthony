@@ -24,7 +24,9 @@ const Countdown = () => {
     }
 
     const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const hours = Math.floor(
+      (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
     const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
 
     return { days, hours, minutes };
@@ -77,7 +79,7 @@ const Countdown = () => {
       </div>
       <div className="countdown_sm">
         <p className="countdown_title" ref={titleRef}>
-          The big day is almost here—we can't wait to celebrate with you!
+          The big day is almost here—we can&apos;t wait to celebrate with you!
         </p>
 
         <div className="couple_section" ref={coupleRef}>
@@ -91,8 +93,7 @@ const Countdown = () => {
           <div className="line"></div>
 
           <img
-                     src="https://i.imgur.com/3aOKNP6.png"
-
+            src="https://i.imgur.com/3aOKNP6.png"
             alt="Groom"
             className="bridal_img"
           />

@@ -45,6 +45,7 @@
 .nav_right {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
 
 .rsvp_btn {
@@ -79,4 +80,76 @@
   background-color: var(--lilac);
   transition: 1s all ease-in-out;
   cursor: pointer;
+}
+
+.menu {
+  color: #333;
+  font-size: 30px;
+  display: none;
+}
+
+.masa,
+.mobile_menu,
+.nalas {
+  display: none;
+}
+
+@media screen and (max-width: 626px) {
+  .nav_container {
+    height: 90px;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav_ul,
+  .mm {
+    display: none;
+  }
+
+  .masa,
+  .menu,
+  .closer,
+  .nalas {
+    display: flex;
+  }
+
+  .jg {
+    width: 70px;
+  }
+
+  .nav_middle {
+    display: none;
+  }
+
+  .mobile_menu {
+    display: flex;
+    position: fixed;
+    background-color: var(--back);
+    height: 100vh;
+    width: 100%;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .closer {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  .close_ico {
+    font-size: 30px;
+  }
+  .mobile_li {
+    list-style: none;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: "made";
+    font-weight: 300;
+    font-size: 30px;
+    text-transform: uppercase;
+  }
 }

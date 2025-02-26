@@ -1,10 +1,9 @@
 .story_container {
-  background-color:var(--back);
+  background-color: var(--back);
 
   padding: 100px 50px;
   text-align: center;
   border-bottom: 1px solid #e1dede;
-
 }
 
 .story_title {
@@ -27,4 +26,20 @@
   line-height: 150%;
   width: 70%;
   margin-bottom: 30px;
+}
+@media screen and (max-width: 797px) {
+  .story_title {
+    font-size: 30px;
+
+    width: 90%;
+  }
+
+  .story_container {
+    padding: 50px 30px;
+  }
+
+  .story_para{
+    width: 90%;
+    font-size: 22px;
+  }
 }

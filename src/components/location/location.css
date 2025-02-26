@@ -88,3 +88,32 @@
   font-size: 25px;
   text-shadow: 0px 0px 0px #333;
 }
+
+@media screen and (max-width: 860px) {
+  .location_container {
+    display: flex;
+    flex-direction: column-reverse;
+    height: auto;
+  }
+
+  .hotel_name{
+    width: 90%;
+  }
+  .location_time{
+    font-size: 34px;
+  }
+  .short_para{
+    width: 90%;
+  }
+
+  .locas{
+    width: 90%;
+    font-size: 22px;
+  }
+  .ff{
+    font-size: 20px;
+  }
+  .dd_pra{
+    width: 90%;
+  }
+}

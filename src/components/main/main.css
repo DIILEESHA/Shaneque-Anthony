@@ -110,3 +110,25 @@
   font-weight: 300;
   font-family: "lily";
 }
+@media screen and (max-width: 797px) {
+  .main_container {
+    display: flex;
+    flex-direction: column-reverse;
+    height: auto;
+    gap: 20px;
+  }
+  .main_imf{
+    height: 70vh;
+  }
+
+  .couple_name{
+    font-size: 30px;
+  }
+  .save,.date{
+    font-size: 24px;
+  }
+
+  .main_sub_left{
+    margin-bottom: 30px;
+  }
+}
