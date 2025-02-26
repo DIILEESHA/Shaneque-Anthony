@@ -96,24 +96,28 @@
     height: auto;
   }
 
-  .hotel_name{
+  .venue_img {
+    height: 60vh;
+  }
+
+  .hotel_name {
     width: 90%;
   }
-  .location_time{
+  .location_time {
     font-size: 34px;
   }
-  .short_para{
+  .short_para {
     width: 90%;
   }
 
-  .locas{
+  .locas {
     width: 90%;
     font-size: 22px;
   }
-  .ff{
+  .ff {
     font-size: 20px;
   }
-  .dd_pra{
+  .dd_pra {
     width: 90%;
   }
 }
