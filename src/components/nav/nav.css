@@ -133,14 +133,19 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    
   }
 
   .closer {
     position: absolute;
+
     top: 20px;
+    z-index: 100;
     right: 20px;
   }
+
   .close_ico {
+position: relative;
     font-size: 30px;
   }
   .mobile_li {

@@ -7,29 +7,21 @@ import gsap from "gsap";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const menuRef = useRef(null);
+  const menuListRef = useRef(null);
 
   // Toggle mobile menu
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    setIsOpen((prev) => !prev);
   };
 
-  // GSAP Animation
+  // GSAP Animation for mobile_ul
   useEffect(() => {
     if (isOpen) {
-      gsap.to(menuRef.current, {
-        x: 0,
-        opacity: 1,
-        duration: 0.5,
-        ease: "power3.out",
-      });
-    } else {
-      gsap.to(menuRef.current, {
-        x: "100%",
-        opacity: 0,
-        duration: 0.5,
-        ease: "power3.in",
-      });
+      gsap.fromTo(
+        menuListRef.current.children,
+        { x: 50, opacity: 0 },
+        { x: 0, opacity: 1, duration: 0.5, stagger: 0.1, ease: "power3.out" }
+      );
     }
   }, [isOpen]);
 
@@ -87,28 +79,30 @@ const Nav = () => {
         </div>
 
         {/* Mobile Menu */}
-        <div ref={menuRef} className={`mobile_menu ${isOpen ? "open" : ""}`}>
-          <div className="closer" onClick={toggleMenu}>
-            <IoCloseOutline className="close_ico" />
+        {isOpen && (
+          <div className="mobile_menu">
+            <div className="closer" onClick={toggleMenu}>
+              <IoCloseOutline className="close_ico" />
+            </div>
+            <ul ref={menuListRef} className="mobile_ul">
+              <li className="mobile_li">
+                <Link to="/guest-book" className="appa" onClick={toggleMenu}>
+                  Guest Book
+                </Link>
+              </li>
+              <li className="mobile_li">
+                <Link to="/faq" className="appa" onClick={toggleMenu}>
+                  FAQs
+                </Link>
+              </li>
+              <li className="mobile_li">
+                <Link to="/rsvp" className="appa" onClick={toggleMenu}>
+                  RSVP
+                </Link>
+              </li>
+            </ul>
           </div>
-          <ul className="mobile_ul">
-            <li className="mobile_li">
-              <Link to="/guest-book" className="appa" onClick={toggleMenu}>
-                Guest Book
-              </Link>
-            </li>
-            <li className="mobile_li">
-              <Link to="/faq" className="appa" onClick={toggleMenu}>
-                FAQs
-              </Link>
-            </li>
-            <li className="mobile_li">
-              <Link to="/rsvp" className="appa" onClick={toggleMenu}>
-                RSVP
-              </Link>
-            </li>
-          </ul>
-        </div>
+        )}
       </div>
     </div>
   );
