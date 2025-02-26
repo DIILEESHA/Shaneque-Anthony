@@ -32,7 +32,7 @@ const Location = () => {
       { opacity: 0, y: 50 },
       { opacity: 1, y: 0, duration: 0.4, ease: "easeInOut" }
     );
-    
+
     tl.fromTo(
       hotelNameRef.current,
       { opacity: 0, x: -50 },
@@ -80,11 +80,7 @@ const Location = () => {
     <div className="loca" ref={locationRef}>
       <div className="location_container">
         <div className="location_sm ma">
-          <img
-            src="https://i.imgur.com/PWvvapm.png"
-            alt=""
-            className="lo"
-          />
+          <img src="https://i.imgur.com/PWvvapm.png" alt="" className="lo" />
           <p className="location_title" ref={titleRef}>
             Shaneque & Anthony – Our Forever Begins Here
           </p>
@@ -105,11 +101,19 @@ const Location = () => {
             elegance, and unforgettable moments!
           </p>
 
-          <button className="rsvp_btn" ref={buttonRef}>Map Link</button>
+          <button className="rsvp_btn" ref={buttonRef}>
+            <a
+              className="appa"
+              href="https://maps.app.goo.gl/2hDZayGf6vmLyhum6"
+              target="_blank"
+            >
+              Map Link
+            </a>
+          </button>
         </div>
         <div className="location_sm">
           <img
-            src="https://i.imgur.com/Y8mzLJW.jpeg"
+            src="https://i.imgur.com/EHaryNJ.jpeg"
             alt=""
             className="venue_img"
           />
@@ -119,8 +123,8 @@ const Location = () => {
         <p className="locas" ref={quoteRef}>
           <RiDoubleQuotesL />
           A day of love, laughter, and forever! ✨ Join us for a celebration
-          filled with joy, style, and unforgettable moments as we say 'I do' with
-          the ones who matter most—YOU!
+          filled with joy, style, and unforgettable moments as we say 'I do'
+          with the ones who matter most—YOU!
           <RiDoubleQuotesR />
         </p>
         <h2 className="ff" ref={coupleNameRef}>

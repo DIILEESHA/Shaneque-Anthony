@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Parallax } from "react-parallax";
 import "./parallax.css";
+import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -59,7 +60,9 @@ const Parallaxy = () => {
           special day. Kindly RSVP by April 10, 2025.
         </p>
         <button className="rsvp_btn" ref={rsvpButtonRef}>
-          RSVP Here
+          <Link to="/rsvp" className="appa">
+            RSVP Here
+          </Link>
         </button>
       </Parallax>
     </div>
