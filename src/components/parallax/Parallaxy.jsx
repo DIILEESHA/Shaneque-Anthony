@@ -48,7 +48,7 @@ const Parallaxy = () => {
         blur={10}
         className="dd"
         bgImage="https://i.imgur.com/TA476Xe.jpeg"
-        bgImageAlt="the cat"
+        bgImageAlt="the rsvpimage"
         strength={350}
       >
         <h2 className="dsd" ref={rsvpTitleRef}>

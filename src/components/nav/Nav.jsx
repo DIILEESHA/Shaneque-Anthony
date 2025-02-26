@@ -97,7 +97,8 @@ const Nav = () => {
               </li>
               <li className="mobile_li">
                 <Link to="/rsvp" className="appa" onClick={toggleMenu}>
-                  RSVP
+          <button className="rsvp_btn">Submit RSVP</button>
+                  
                 </Link>
               </li>
             </ul>

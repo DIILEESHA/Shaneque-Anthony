@@ -1,5 +1,5 @@
 .faq_container {
-    padding: 100px 50px;
+  padding: 100px 50px;
   background-color: var(--back);
 }
 
@@ -8,9 +8,10 @@
   padding: 0px 0px 20px 0px;
   grid-template-columns: repeat(2, 1fr);
   border-bottom: 1px solid #e1dede;
-
 }
-.mh{padding-top: 40px;}
+.mh {
+  padding-top: 40px;
+}
 
 .faq_title {
   font-family: "made";
@@ -32,7 +33,6 @@
   display: none;
 }
 
-
 .faq_para {
   font-family: "prgati";
   font-weight: 300;
@@ -40,4 +40,18 @@
   font-size: 20px;
   color: #333;
   margin-bottom: 30px;
+}
+@media screen and (max-width: 753px) {
+  .faq_grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .faq_li {
+    font-size: 20px;
+    width: 100%;
+  }
+  .faq_container {
+    padding: 50px 15px;
+  }
 }
