@@ -1,10 +1,19 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./countdown.css";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Countdown = () => {
   const weddingDate = new Date("November 15, 2025 15:00:00").getTime(); // 3:00 PM EST
 
   const [timeLeft, setTimeLeft] = useState(getTimeRemaining());
+
+  const countdownRef = useRef(null);
+  const titleRef = useRef(null);
+  const coupleRef = useRef(null);
+  const counterRef = useRef(null);
 
   function getTimeRemaining() {
     const now = new Date().getTime();
@@ -26,11 +35,37 @@ const Countdown = () => {
       setTimeLeft(getTimeRemaining());
     }, 60000); // Update every minute
 
-    return () => clearInterval(timer);
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: countdownRef.current,
+        start: "top 80%", // Animation starts when 80% of the element is in view
+        toggleActions: "play none none none", // Play only once
+      },
+    });
+
+    tl.fromTo(
+      titleRef.current,
+      { y: 50, opacity: 0 },
+      { y: 0, opacity: 1, duration: 1, ease: "power3.out" }
+    );
+
+    tl.fromTo(
+      coupleRef.current,
+      { y: 50, opacity: 0 },
+      { y: 0, opacity: 1, duration: 1, delay: 0.3, ease: "power3.out" }
+    );
+
+    tl.fromTo(
+      counterRef.current,
+      { y: 50, opacity: 0 },
+      { y: 0, opacity: 1, duration: 1, delay: 0.6, ease: "power3.out" }
+    );
+
+    return () => clearInterval(timer); // Cleanup on unmount
   }, []);
 
   return (
-    <div className="countdown_container">
+    <div ref={countdownRef} className="countdown_container">
       <div className="countdown_sm">
         <div className="countdown_img">
           <img
@@ -41,11 +76,11 @@ const Countdown = () => {
         </div>
       </div>
       <div className="countdown_sm">
-        <p className="countdown_title">
+        <p className="countdown_title" ref={titleRef}>
           The big day is almost here—we can't wait to celebrate with you!
         </p>
 
-        <div className="couple_section">
+        <div className="couple_section" ref={coupleRef}>
           <img
             src="https://i.imgur.com/Ib36mYm.png"
             alt="Bride"
@@ -63,7 +98,7 @@ const Countdown = () => {
           <h2 className="bridal_name">Anthony</h2>
         </div>
 
-        <div className="counter_section">
+        <div className="counter_section" ref={counterRef}>
           <div className="sub_counter">
             <h2 className="day_count">{timeLeft.days}</h2>
             <h2 className="days">days</h2>
@@ -80,8 +115,6 @@ const Countdown = () => {
           </div>
         </div>
       </div>
-
-      
     </div>
   );
 };
