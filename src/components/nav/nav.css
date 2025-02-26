@@ -1,0 +1,82 @@
+.nav_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-bottom: 1px solid #e1dede;
+  padding: 0px 50px;
+  align-items: center;
+  /* position: absolute; */
+  top: 0;
+  position: sticky;
+  background-color: var(--back);
+
+  z-index: 200;
+  width: 100%;
+  height: 100px;
+  background-color: var(--back);
+  /* place-items: center; */
+}
+
+.nav_logo {
+}
+
+.nav_logo_img {
+  object-fit: contain;
+  width: 90px;
+  height: 90px;
+}
+
+.nav_ul {
+  display: flex;
+  gap: 16px;
+}
+
+.nav_li {
+  list-style: none;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-family: "prgati";
+}
+
+.nav_middle {
+  display: flex;
+  justify-content: center;
+}
+
+.nav_right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.rsvp_btn {
+  font-family: "made";
+  padding: 7px 30px;
+  border-radius: 0px;
+  font-size: 20px;
+  text-transform: uppercase;
+  transition: 1s all ease-in-out;
+  background-color: transparent;
+  position: relative;
+  z-index: 10;
+  border: 1px solid #333;
+}
+
+.rsvp_btn::after {
+  position: absolute;
+  top: -5px;
+  bottom: 0px;
+  z-index: -10;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 5px;
+  border: 1px solid #333;
+}
+
+.rsvp_btn:hover {
+  /* z-index: -10; */
+
+  color: #fff;
+  background-color: var(--lilac);
+  transition: 1s all ease-in-out;
+  cursor: pointer;
+}

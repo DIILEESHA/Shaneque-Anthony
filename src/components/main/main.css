@@ -1,0 +1,112 @@
+:root {
+  --tiffany: #81d8d0;
+}
+
+.main_container {
+  height: 100vh;
+  background-color: var(--back);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  z-index: 10;
+  border-bottom: 1px solid #e1dede;
+
+  width: 100%;
+  /* top: 100px; */
+}
+
+.main_sub_left_imger {
+  position: relative;
+}
+
+.main_sub_left {
+  /* display: flex; */
+  /* flex-direction: column; */
+  display: flex;
+  text-align: center;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.date,
+.place {
+  line-height: 150%;
+  font-weight: 300;
+  font-family: "prgati";
+}
+
+.date {
+  font-size: 29px;
+}
+
+.save {
+  font-family: "made";
+  font-weight: 300;
+  font-size: 29px;
+  text-transform: uppercase;
+  line-height: 150%;
+  margin-top: 10px;
+}
+
+.main_detail_section {
+  margin-bottom: 30px;
+}
+
+.main_imf {
+  width: 100%;
+  object-fit: cover;
+  object-position: center 6%;
+  height: 100vh;
+}
+
+.main_left_img {
+  object-fit: cover;
+  /* width: 300px; */
+  width: 250px;
+  height: auto;
+}
+
+.main_sub_left_imger::after {
+  position: absolute;
+  content: "";
+  /* border: 1px solid var(--gray); */
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  top: -10px;
+  left: 10px;
+}
+
+.lino {
+  margin: 5px auto;
+  width: 30%;
+  height: 1px;
+  background-color: var(--lilac);
+  text-align: center;
+}
+
+.name_section {
+  left: -50px;
+  position: absolute;
+  transform: rotate(-90deg);
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.couple_name {
+  font-weight: 300;
+  color: var(--lilac);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  line-height: 100%;
+  font-weight: 300;
+  font-family: "lily";
+}

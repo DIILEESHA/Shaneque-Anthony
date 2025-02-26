@@ -1,0 +1,28 @@
+.dd {
+  min-height: 70vh;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.dsd {
+  font-size: 50px;
+  /* color: #fff; */
+  text-transform: uppercase;
+  font-family: "lily";
+  font-weight: 300;
+}
+
+.dd_pra {
+  position: relative;
+  color: #333;
+  font-family: "prgati";
+  font-size: 24px;
+  width: 70%;
+  text-align: center;
+  margin: 10px auto 30px auto;
+  /* z-index: 10; */
+}

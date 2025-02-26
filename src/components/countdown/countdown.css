@@ -1,0 +1,96 @@
+.countdown_container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 100vh;
+  background-color: var(--back);
+  border-bottom: 1px solid #e1dede;
+
+  /* padding: 0 50px; */
+}
+
+.main_count_img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.bridal_img {
+  width: 50px;
+}
+
+.countdown_sm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.countdown_title {
+  font-family: "lily";
+  font-weight: 300;
+  color: var(--lilac);
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.couple_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bridal_name {
+  font-family: "pragti";
+  font-family: "prgati";
+  font-weight: 300;
+  color: #333;
+  font-size: 20px;
+}
+
+.countdown_img{
+    position: relative;
+}
+
+.countdown_img::after{
+    position: absolute;
+    content: "";
+    /* border: 3px solid #333; */
+    top: -10px;
+    left: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.line {
+  margin: 20px 0;
+  width: 1px;
+  height: 100px;
+  background-color: #333;
+}
+
+.counter_section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 30px;
+  gap: 30px;
+}
+
+.day_count {
+  font-family: "made";
+  font-size: 60px;
+  font-weight: 300;
+  line-height: 100%;
+}
+
+.days {
+  font-family: "prgati";
+  text-transform: capitalize;
+  font-weight: 300;
+}
+
+.nama {
+  font-size: 40px;
+  margin-top: -50px;
+}

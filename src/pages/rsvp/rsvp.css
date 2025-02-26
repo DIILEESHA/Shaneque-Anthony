@@ -1,0 +1,16 @@
+.albert {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  font-family: "prgati";
+}
+.rsvp_para {
+  font-family: "lily";
+  color: var(--lilac);
+  font-size: 25px;
+}
+
+.kk {
+  margin: 0 5px 0px 0px;
+}

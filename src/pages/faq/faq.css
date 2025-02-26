@@ -1,0 +1,43 @@
+.faq_container {
+    padding: 100px 50px;
+  background-color: var(--back);
+}
+
+.faq_grid {
+  display: grid;
+  padding: 0px 0px 20px 0px;
+  grid-template-columns: repeat(2, 1fr);
+  border-bottom: 1px solid #e1dede;
+
+}
+.mh{padding-top: 40px;}
+
+.faq_title {
+  font-family: "made";
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 30px;
+}
+
+.faq_li {
+  font-family: "made";
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-weight: 300;
+  font-size: 24px;
+}
+.nala {
+  font-size: 20px;
+  display: none;
+}
+
+
+.faq_para {
+  font-family: "prgati";
+  font-weight: 300;
+  line-height: 150%;
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 30px;
+}

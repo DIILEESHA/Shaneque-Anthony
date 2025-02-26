@@ -1,0 +1,126 @@
+.guest {
+  text-align: center;
+  background-color: var(--back);
+  min-height: 100vh;
+  padding: 100px 50px 50px 50px;
+}
+
+.guest_title {
+  font-family: "made";
+  font-weight: 300;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.guest_para {
+  font-family: "prgati";
+  color: #333;
+  line-height: 150%;
+  width: 70%;
+  margin: 0 auto;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.hj {
+  padding: 50px 200px;
+}
+.guest_form {
+  background-color: #fff;
+  padding: 50px;
+}
+
+.input_label {
+  font-family: "made";
+  font-weight: 300;
+  font-size: 17px;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+.form_input {
+  margin-bottom: 20px;
+  border-radius: 0px;
+  border: 1px solid #7c7b7b;
+  padding: 10px 5px;
+  outline: none;
+}
+
+.input_textarea {
+  height: 15vh;
+  margin-bottom: 20px;
+  padding: 5px;
+  border-radius: 0px;
+  border: 1px solid #333;
+  border: 1px solid #7c7b7b;
+  outline: none;
+}
+
+.input_section {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.submitter {
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  font-family: "made";
+  cursor: pointer;
+  font-weight: 300;
+  font-size: 17px;
+  padding: 10px;
+  border: 1px solid #333;
+}
+.error {
+  color: rgb(150, 22, 22);
+  margin-top: -10px;
+  font-family: "made";
+  font-weight: 300;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.hg {
+  font-family: "made";
+  font-weight: 300;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.prba {
+  font-family: "prgati";
+}
+
+.message_card {
+  display: flex;
+  padding: 10px 200px;
+  justify-content: flex-start;
+}
+
+.jhh {
+  border-bottom: 1px solid #d2cccc;
+  align-items: center;
+  /* flex-direction: column; */
+  justify-content: flex-start;
+  /* width: 100%; */
+  width: 100%;
+  display: flex;
+}
+
+.gg {
+  font-family: "made";
+  font-weight: 300;
+  font-size: 17px;
+  margin: 0 10px 0px 0px;
+  margin-bottom: 10px;
+}
+
+.guest_message {
+  font-size: 20px;
+  text-align: left;
+  font-family: "prgati";
+  font-size: 17px;
+  margin-bottom: 10px;
+  font-family: "made";
+}
