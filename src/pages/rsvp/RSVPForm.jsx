@@ -67,7 +67,7 @@ const RSVPForm = () => {
     <div className="guest">
       <ToastContainer position="top-right" autoClose={3000} />
       <h2 className="guest_title">You're Invited! 🎉</h2>
-      <p className="rsvp_para">Join us for an unforgettable experience in the stunning landscapes of Jamaica.</p>
+      <p className="guest_para">Join us for an unforgettable experience in the stunning landscapes of Jamaica.</p>
 
       <div className="hj">
         <form onSubmit={handleSubmit} className="guest_form">

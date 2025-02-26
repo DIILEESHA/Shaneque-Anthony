@@ -40,7 +40,7 @@
 .form_input {
   margin-bottom: 20px;
   border-radius: 0px;
-  border: 1px solid #7c7b7b;
+  border: 1px solid #d6d1d1;
   padding: 10px 5px;
   outline: none;
 }
@@ -50,8 +50,8 @@
   margin-bottom: 20px;
   padding: 5px;
   border-radius: 0px;
-  border: 1px solid #333;
-  border: 1px solid #7c7b7b;
+  border: 1px solid #d6d1d1;
+
   outline: none;
 }
 
@@ -123,4 +123,33 @@
   font-size: 17px;
   margin-bottom: 10px;
   font-family: "made";
+}
+@media screen and (max-width: 1106px) {
+  .hj {
+    padding: 50px 100px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .hj {
+    padding: 50px 50px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .hj {
+    padding: 50px 20px;
+  }
+
+  .guest {
+    padding: 50px 5px;
+  }
+
+  .guest_form {
+    padding: 20px;
+  }
+
+  .guest_para {
+    width: 90%;
+  }
 }
