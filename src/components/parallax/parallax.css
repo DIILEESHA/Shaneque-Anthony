@@ -27,8 +27,7 @@
   /* z-index: 10; */
 }
 @media screen and (max-width: 860px) {
-
-  .dd_pra{
+  .dd_pra {
     width: 90%;
   }
 }
