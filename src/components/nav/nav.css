@@ -133,6 +133,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    transition: 1s all ease-in-out;
   }
 
   .closer {
