@@ -30,4 +30,7 @@
   .dd_pra {
     width: 90%;
   }
+  .dd{
+    min-height: 60vh;
+  }
 }

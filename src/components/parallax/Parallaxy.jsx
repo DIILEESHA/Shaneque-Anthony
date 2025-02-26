@@ -49,7 +49,7 @@ const Parallaxy = () => {
         className="dd"
         bgImage="https://i.imgur.com/TA476Xe.jpeg"
         bgImageAlt="the cat"
-        strength={300}
+        strength={350}
       >
         <h2 className="dsd" ref={rsvpTitleRef}>
           RSVP
