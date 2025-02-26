@@ -82,7 +82,7 @@ const Countdown = () => {
 
         <div className="couple_section" ref={coupleRef}>
           <img
-            src="https://i.imgur.com/Ib36mYm.png"
+            src="https://i.imgur.com/3aOKNP6.png"
             alt="Bride"
             className="bridal_img"
           />
@@ -91,7 +91,8 @@ const Countdown = () => {
           <div className="line"></div>
 
           <img
-            src="https://i.imgur.com/rUPG2QG.png"
+                     src="https://i.imgur.com/3aOKNP6.png"
+
             alt="Groom"
             className="bridal_img"
           />
