@@ -113,6 +113,7 @@ const Dashboard = () => {
               <input
                 type="password"
                 value={password}
+                className="dals"
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="Enter password"
               />

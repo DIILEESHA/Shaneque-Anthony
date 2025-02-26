@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Home from "./pages/home/Home";
 import "./App.css";
 import Faq from "./pages/faq/Faq";
@@ -9,10 +9,13 @@ import RSVPForm from "./pages/rsvp/RSVPForm";
 import Dashboard from "./pages/dashboard/Dashboard";
 import ScrollToTop from "./ScrollToTop";
 
-function App() {
+function AppContent() {
+  const location = useLocation();
+  const hideNavFooter = location.pathname === "/dashboard";
+
   return (
-    <Router>
-      <Nav />
+    <>
+      {!hideNavFooter && <Nav />}
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -21,7 +24,15 @@ function App() {
         <Route path="/rsvp" element={<RSVPForm />} />
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
-      <Footer />
+      {!hideNavFooter && <Footer />}
+    </>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <AppContent />
     </Router>
   );
 }
