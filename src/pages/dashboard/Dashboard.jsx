@@ -55,7 +55,7 @@ const Dashboard = () => {
   const deleteEntry = async (entryId) => {
     if (window.confirm("Are you sure you want to delete this entry?")) {
       try {
-        await deleteDoc(doc(db, "rsvpDetails", entryId));
+        await deleteDoc(doc(db, "rsvp", entryId));
         setData(data.filter((entry) => entry.id !== entryId));
         toast.success("Entry deleted successfully!");
       } catch (error) {
@@ -69,7 +69,7 @@ const Dashboard = () => {
     if (window.confirm("Are you sure you want to delete ALL entries?")) {
       try {
         const batch = writeBatch(db);
-        const querySnapshot = await getDocs(collection(db, "rsvpDetails"));
+        const querySnapshot = await getDocs(collection(db, "rsvp"));
         querySnapshot.forEach((doc) => batch.delete(doc.ref));
         await batch.commit();
         setData([]);
