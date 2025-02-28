@@ -6,6 +6,12 @@
   border-bottom: 1px solid #e1dede;
 }
 
+.nadaya {
+  margin-top: -60px;
+  /* padding: 50px; */
+  /* background-color: #333; */
+}
+
 .story_title {
   font-family: "lily";
   font-weight: 300;
@@ -38,7 +44,7 @@
     padding: 50px 30px;
   }
 
-  .story_para{
+  .story_para {
     width: 90%;
     font-size: 22px;
   }

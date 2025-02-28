@@ -23,7 +23,7 @@
   background-color: #f8f7f4;
 
   overflow: hidden;
-  padding: 50px 100px;
+  padding: 50px 80px;
   max-width: 1900px; /* Max width to ensure it doesn't stretch too wide on large devices */
   margin: 0 auto; /* Center the container */
   width: 100%; /* Take full width up to max-width */
