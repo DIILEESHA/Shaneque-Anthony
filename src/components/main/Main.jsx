@@ -32,7 +32,7 @@ const Main = () => {
           <h2 className="couple_name">Shaneque & Anthony</h2>
           <h2 className="save">save the date</h2>
           <div className="lino"></div>
-          <h1 className="date">November 15, 2025</h1>
+          <h1 className="date">April 25, 2026</h1>
           <h3 className="place">
             Unicorn Cove Villa, Lot 17 Boscobel, St. Mary, Jamaica
           </h3>
