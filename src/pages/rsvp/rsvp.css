@@ -1,24 +1,141 @@
-.albert {
+/* Background */
+.guest {
+  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 20px;
-  font-family: "prgati";
-}
-.rsvp_para {
-  font-family: "lily";
-  color: var(--lilac);
-  font-size: 25px;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f8f1eb, #ffffff);
+  padding: 20px;
 }
 
-.kk {
-  margin: 0 5px 0px 0px;
+/* Form */
+.rsvp_form {
+  width: 100%;
+  max-width: 460px;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease;
 }
 
-@media screen and (max-width: 850px) {
-.rsvp_para{
-  font-size: 23px;
-  width: 90%;
-  margin: 0 auto;
+/* Title */
+.rsvp_title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #222;
 }
+
+/* Fields */
+.rsvp_field {
+  margin-bottom: 18px;
+}
+
+.rsvp_input,
+.rsvp_select,
+.rsvp_textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+  background: #fafafa;
+  transition: 0.3s;
+}
+
+.rsvp_input:focus,
+.rsvp_select:focus,
+.rsvp_textarea:focus {
+  outline: none;
+  border-color: #c59d5f;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(197, 157, 95, 0.2);
+}
+
+.rsvp_textarea {
+  resize: none;
+  min-height: 100px;
+}
+
+/* Button */
+.rsvp_button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #c59d5f, #a97c3a);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.rsvp_button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(197, 157, 95, 0.35);
+}
+
+/* Error */
+.rsvp_error {
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+  color: #e63946;
+}
+
+/* Closed */
+.guest_title {
+  text-align: center;
+  font-size: 26px;
+}
+
+.guest_para {
+  text-align: center;
+  margin-top: 10px;
+  color: #666;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .rsvp_form {
+    padding: 30px;
+  }
+
+  .rsvp_title {
+    font-size: 24px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .rsvp_form {
+    padding: 24px;
+    border-radius: 14px;
+  }
+
+  .rsvp_title {
+    font-size: 22px;
+  }
+
+  .rsvp_input,
+  .rsvp_select,
+  .rsvp_textarea {
+    font-size: 14px;
+    padding: 12px;
+  }
 }
