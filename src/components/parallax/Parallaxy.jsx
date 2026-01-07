@@ -57,7 +57,7 @@ const Parallaxy = () => {
         </h2>
         <p className="dd_pra" ref={rsvpTextRef}>
           Please let us know if you will be able to join us in celebrating our
-          special day. Kindly RSVP by July 30, 2025.
+          special day. Kindly RSVP by March 30, 2026.
         </p>
         <button className="rsvp_btn" ref={rsvpButtonRef}>
           <Link to="/rsvp" className="appa">
