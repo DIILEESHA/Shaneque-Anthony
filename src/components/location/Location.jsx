@@ -89,7 +89,7 @@ const Location = () => {
             Unicorn Cove Villa, Lot 17 Boscobel. St. Mary Jamaica
           </p>
           <h2 className="location_date" ref={dateRef}>
-            November 15, 2025
+ April 25, 2026
           </h2>
           <h3 className="location_time" ref={timeRef}>
             3 o’clock in the afternoon
