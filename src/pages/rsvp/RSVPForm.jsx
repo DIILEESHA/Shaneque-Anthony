@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import "./rsvp.css";
 
 const RSVPForm = () => {
-  // 🔓 RSVP OPEN FLAG
+  // 🔓 RSVP OPEN
   const isRSVPOpen = true;
 
   const [fullName, setFullName] = useState("");
@@ -20,11 +20,11 @@ const RSVPForm = () => {
   useEffect(() => {
     const fetchRSVPs = async () => {
       try {
-        const querySnapshot = await getDocs(collection(db, "rsvp"));
-        const responses = querySnapshot.docs.map((doc) => doc.data());
-        setRSVPResponses(responses);
-      } catch (error) {
-        toast.error("Error fetching RSVP responses");
+        const snapshot = await getDocs(collection(db, "rsvp"));
+        const data = snapshot.docs.map((doc) => doc.data());
+        setRSVPResponses(data);
+      } catch {
+        toast.error("Failed to load RSVPs");
       }
     };
     fetchRSVPs();
@@ -34,10 +34,9 @@ const RSVPForm = () => {
     e.preventDefault();
 
     let newErrors = {};
-    if (!fullName.trim()) newErrors.fullName = "Full Name is required";
-    if (attending === "Yes" && (!guests || guests < 1)) {
-      newErrors.guests = "Please enter number of guests";
-    }
+    if (!fullName.trim()) newErrors.fullName = "Full name is required";
+    if (attending === "Yes" && guests < 1)
+      newErrors.guests = "Guests required";
 
     setErrors(newErrors);
     if (Object.keys(newErrors).length > 0) return;
@@ -47,15 +46,10 @@ const RSVPForm = () => {
         fullName,
         attending,
         guests: attending === "Yes" ? guests : "0",
-        dietaryRestrictions: attending === "Yes" ? dietaryRestrictions : "",
-        specialMessage: attending === "Yes" ? specialMessage : "",
+        dietaryRestrictions,
+        specialMessage,
         createdAt: new Date(),
       });
-
-      setRSVPResponses([
-        ...rsvpResponses,
-        { fullName, attending, guests, dietaryRestrictions, specialMessage },
-      ]);
 
       toast.success("RSVP submitted successfully 🎉");
 
@@ -65,8 +59,8 @@ const RSVPForm = () => {
       setDietaryRestrictions("");
       setSpecialMessage("");
       setErrors({});
-    } catch (error) {
-      toast.error("Error submitting RSVP");
+    } catch {
+      toast.error("Submission failed");
     }
   };
 
@@ -75,65 +69,82 @@ const RSVPForm = () => {
       <ToastContainer />
 
       {!isRSVPOpen ? (
-        <>
-          <h2 className="guest_title">RSVP is closed</h2>
-          <p className="guest_para">Thank you for your interest!</p>
-        </>
+        <div className="rsvp_closed">
+          <h2 className="guest_title">RSVP is Closed</h2>
+          <p className="guest_para">Thank you for your interest</p>
+        </div>
       ) : (
-        <form className="guest_form" onSubmit={handleSubmit}>
-          <h2 className="guest_title">RSVP</h2>
+        <form className="rsvp_form" onSubmit={handleSubmit}>
+          <h2 className="rsvp_title">RSVP</h2>
 
-          <input
-            type="text"
-            placeholder="Full Name"
-            value={fullName}
-            onChange={(e) => setFullName(e.target.value)}
-          />
-          {errors.fullName && (
-            <p className="error">{errors.fullName}</p>
-          )}
+          <div className="rsvp_field">
+            <input
+              className="rsvp_input"
+              type="text"
+              placeholder="Full Name"
+              value={fullName}
+              onChange={(e) => setFullName(e.target.value)}
+            />
+            {errors.fullName && (
+              <span className="rsvp_error">{errors.fullName}</span>
+            )}
+          </div>
 
-          <select
-            value={attending}
-            onChange={(e) => setAttending(e.target.value)}
-          >
-            <option value="Yes">Yes, I will attend</option>
-            <option value="No">Sorry, I can’t make it</option>
-          </select>
+          <div className="rsvp_field">
+            <select
+              className="rsvp_select"
+              value={attending}
+              onChange={(e) => setAttending(e.target.value)}
+            >
+              <option value="Yes">Yes, I will attend</option>
+              <option value="No">Sorry, I can’t make it</option>
+            </select>
+          </div>
 
           {attending === "Yes" && (
             <>
-              <input
-                type="number"
-                min="1"
-                placeholder="Number of Guests"
-                value={guests}
-                onChange={(e) => setGuests(e.target.value)}
-              />
-              {errors.guests && (
-                <p className="error">{errors.guests}</p>
-              )}
+              <div className="rsvp_field">
+                <input
+                  className="rsvp_input"
+                  type="number"
+                  min="1"
+                  placeholder="Number of Guests"
+                  value={guests}
+                  onChange={(e) => setGuests(e.target.value)}
+                />
+                {errors.guests && (
+                  <span className="rsvp_error">{errors.guests}</span>
+                )}
+              </div>
 
-              <input
-                type="text"
-                placeholder="Dietary Restrictions"
-                value={dietaryRestrictions}
-                onChange={(e) =>
-                  setDietaryRestrictions(e.target.value)
-                }
-              />
+              <div className="rsvp_field">
+                <input
+                  className="rsvp_input"
+                  type="text"
+                  placeholder="Dietary Restrictions"
+                  value={dietaryRestrictions}
+                  onChange={(e) =>
+                    setDietaryRestrictions(e.target.value)
+                  }
+                />
+              </div>
 
-              <textarea
-                placeholder="Special Message"
-                value={specialMessage}
-                onChange={(e) =>
-                  setSpecialMessage(e.target.value)
-                }
-              />
+              <div className="rsvp_field">
+                <textarea
+                  className="rsvp_textarea"
+                  placeholder="Special Message"
+                  value={specialMessage}
+                  onChange={(e) =>
+                    setSpecialMessage(e.target.value)
+                  }
+                />
+              </div>
             </>
           )}
 
-          <button type="submit">Submit RSVP</button>
+          <button type="submit" className="rsvp_button">
+            Submit RSVP
+          </button>
         </form>
       )}
     </div>
