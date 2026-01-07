@@ -6,7 +6,7 @@ import "./countdown.css";
 gsap.registerPlugin(ScrollTrigger);
 
 const Countdown = () => {
-  const weddingDate = new Date("November 15, 2025 15:00:00").getTime(); // 3:00 PM EST
+  const weddingDate = new Date("April 25, 2026 15:00:00").getTime(); // 3:00 PM EST
 
   const [timeLeft, setTimeLeft] = useState(getTimeRemaining());
 
